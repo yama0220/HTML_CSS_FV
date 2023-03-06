@@ -1,0 +1,388 @@
+/*画面端全体の余白をなくすため*/
+body{
+  margin:0;
+}
+
+/*下記ヘッダー設定*/
+/*ヘッダー大枠*/
+.header{
+  position: absolute;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+@media screen and (max-width: 1080px){
+.header{
+    background: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.header_container{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 36px;
+  max-width: 100%;
+}
+
+/*左上ロゴサイズの設定*/
+.header_logo_image{
+  height: 20px;
+}
+
+/*ハンバーガーメニュー*/
+@media screen and (max-width: 1080px){
+  .hamburgermenu{
+    display: block;
+    top: 20px;
+    right: 30px;
+    width: 29px;
+    height: 25px;
+    z-index: 3;
+    cursor: pointer;
+  }
+}
+
+/*ハンバーガーメニューの並び*/
+@media screen and (max-width: 1080px){
+  .hamburgermenu span{
+    position: absolute;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .hamburgermenu span:nth-child(1){
+    top: 15px;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .hamburgermenu span:nth-child(2){
+    top: 39px;
+  }
+}
+
+/*ハンバーガーメニューデザイン*/
+@media screen and (max-width: 1080px){
+  .hamburgermenu_line{
+    top: 27px;
+    cursor: pointer;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    z-index: 11;
+    border-radius: 10px;
+  }
+}
+
+/*リンクにカーソルを重ねた時に白くするため*/
+.a:hover{
+  opacity: .7;
+}
+
+/*ヘッダーメニューの並び指定*/
+.header_menu{
+  display: flex;
+  align-items: center;
+}
+
+/*画面幅1080px以下で上のリンクを消す*/
+@media screen and (max-width: 1080px){
+.header_menu{
+    display: none;
+  }
+}
+
+/*ヘッダーメニュー要素の設定(フォントサイズ、横幅など)*/
+.menu_item{
+  position: relative;
+  color: black;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 45px;
+}
+
+/*ヘッダーメニュー子要素をブロック要素に変更*/
+.menu_item > span{
+  font-family: 'Lato',sans-serif;
+  display: block;
+}
+
+/*更に下の階層の文字サイズのみ変更*/
+.menu_item > span:last-child{
+  font-size: 10px;
+  font-family: "游ゴシック",YuGothic,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+}
+
+/*ヘッダー右上のボタン設定*/
+.header_contact_buttom{
+  color: white;
+  font-size: 12px;
+  background: #f79214;
+  border-radius: 100px;
+  width: auto;
+  padding: 11px 20px;
+  text-decoration: none; /*リンクの白線を消す*/
+  text-align: center;
+}
+
+.header_contact_buttom:hover{
+  opacity: .7;
+}
+
+/*上記までがヘッダー設定*/
+/*下記、本体部分設定*/
+
+/*背景画像の指定と設定*/
+.firstview{
+  background-image: url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  padding-top: 100px;
+  padding-bottom: 28px;
+}
+
+@media screen and (max-width: 767px){
+  .firstview{
+    background-image:none;
+    padding-top: 55px;
+  }
+}
+
+.background_tabletsizes_image{
+  display: none;
+}
+
+@media screen and (max-width: 767px){
+  .background_tabletsizes_image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*ページ中央のアイテム*/
+.firstview_container{
+  max-width: 1140px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+@media screen and (max-width: 767px){
+  .firstview_container{
+   max-width: none;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-bottom: 20px;
+   margin-top: -45vw;
+  }
+}
+
+/*注釈までの入れ物*/
+.firstview_contents{
+  max-width: 520px;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+@media screen and (max-width: 767px){
+  .firstview_contents{
+    max-width: none;
+    margin-bottom: 20px;
+  }
+}
+
+/*大見出しの文字サイズ設定*/
+.firstview_title{
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 54px;
+  margin-bottom: 15px;
+  /*text-align: center;*/
+  font-family: 'Lato',sans-serif;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px){
+  .firstview_title{
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+}
+
+/*メインイメージの位置調整*/
+.main_image{
+  margin-bottom: 40px;
+  display: flex;
+}
+
+@media screen and (max-width: 767px){
+  .main_image{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+/*画像との余白*/
+.main_image > img{
+  margin-right: 15px;
+}
+
+@media screen and (max-width: 767px){
+  .image{
+    width: 27.5%;
+  }
+}
+
+@media screen and (max-width: 767px){
+  .image_no1{
+    width: 40%;
+  }
+}
+
+/*無料カウンセリングボタンの設定*/
+.contact_button{
+  color: white;
+  font-size: 16px;
+  background: #f79214;
+  border-radius: 100px;
+  width: auto;
+  padding: 20px 35px;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 10px
+}
+
+@media screen and (max-width: 767px){
+  .contact_button{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/*資料請求ボタンの設定*/
+.document_button{
+  color: black;
+  font-size: 16px;
+  background: white;
+  border-radius: 100px;
+  border: 1px solid #e0e0e0;;
+  width: auto;
+  padding: 20px 30px;
+  text-decoration: none; /*リンクの白線を消す*/
+  text-align: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px){
+  .document_button{
+    display: none;
+  }
+}
+
+/*グレー注釈の設定*/
+.annotation{
+  color: #a2a2a4;
+  font-size: 12px;
+  list-style: none;
+}
+
+/*下部オレンジ領域の設定*/
+.introduct_line{
+  background: #f79214;
+  padding: 40px;
+}
+
+/*動画、文字のボックス*/
+.introduct_contents{
+  max-width: 1140px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 1024px){
+  .introduct_contents{
+    flex-direction: column;
+    max-width: none;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/*動画のサイズ、位置設定*/
+.video{
+  width: 45%;
+}
+
+@media screen and (max-width: 1024px){
+  .video{
+    width: 100%;
+    padding-bottom: 10px;
+  }
+}
+
+/*動画横文字のボックス*/
+.comment{
+  display: flex;
+  flex-direction: column;
+  margin-left: 32px;
+  color: white;
+  max-height: 210px;
+  max-width: 488px;
+}
+
+@media screen and (max-width: 1024px){
+  .comment{
+    margin-left: 0;
+    justify-content: flex-start;
+    max-height: none;
+    max-width: none;
+  }
+}
+
+
+/*見出しのみのサイズ、位置指定*/
+.comment > h2{
+  font-size: 38px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/*本文のサイズ*/
+.comment > p{
+  font-size: 16px;
+}
+
+/*下記リンクボタンの設定*/
+.learn_link{
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 26px;
+  display: flex;
+}
+
+/*ボタンと文字の余白*/
+.image_button{
+  margin-right: 7px;
+}
+
